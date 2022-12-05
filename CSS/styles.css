@@ -1,0 +1,313 @@
+
+
+
+.top-container {
+    background-color:#827397;
+    position: flex;
+    padding-top: 90px;
+    padding-bottom: 0;
+    margin:0px;
+    height: fit-content;
+}
+
+
+.middle-container {
+    background-color:#D8B9C3;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    /**flex b保证block之间没有间距
+    
+    align-items决定block之间的排列方向**/
+
+}
+
+
+.bottom-container {
+    background-color:#1F2138;
+    line-height: 2;
+}
+/**border property must have values about the border style, like Solid, dotted**/
+
+
+/**the body top margin is affected by the content in it
+even tho you set it 0 there is still gonna have margin 
+bcz there IS MARGIN OF THE CONTENT TOO for example here 
+IN THE h1**/
+
+/**关于网页的各个box是怎么display的
+首先，像段落，标题，div，list，forms是整行式排版
+他们会占据其高度的页面的一整行，block elements
+
+<span> imges, anchor<a> 这些只占据他们内容所占的空间， inline elements
+
+inline-block
+
+display:none, 内容消失，所占据的空间也没有
+visibility:hidden; 内容消失，所占空间依然在
+
+**/
+
+
+
+
+
+#cloud {
+    position:absolute;
+    max-width:20%;
+    right: 10%;
+    top:50px;
+}
+
+body {
+    margin:0px;
+    text-align:center;
+    font-family: 'Montserrat', verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+
+h1 {
+    width:30%;
+    position:relative;
+    margin:50px auto 0 auto;
+/**auto centers the whole heading**/
+    font-family: 'Sacramento', serif;
+    color: #1F2138;
+    font-size: 3.5rem;
+/**1em=16px=100, when a user change the local size, 
+em and percentahe are more accessicble for the users
+em and percentage are inheritated
+one from the parent or upper layer can affect the more specific one
+rem can help with this,
+**/
+}
+
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    margin-bottom: 2%;
+    padding-bottom: 0;
+    font-size:1.6rem;
+    color: #1F2138;
+    font-weight: bold;
+    line-height: 2;
+}
+
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color:#5057a0;
+    font-weight:bolder;
+}
+
+#cloud2 {
+    position:absolute;
+    max-width:30%;
+    left:5%;
+    bottom:60%;
+
+}
+
+#mountain {
+    width:100%;
+    position: relative;
+    bottom: 0px;
+/**保证了高度上不影响其他元素，宽度上占满页面的宽度
+把auto当作是比例不变，max-width则是手动调整图片和母页面的比例，width则是手动调整具体数据， 那
+那么具体的调整和auto结合就可以实现不改变比例的情况下使图片适应页面。
+**/
+}
+/**
+display:
+block
+inline
+inline-block
+**/
+
+
+/**Another property: Position, it includes 
+static
+relative
+absolute
+fixed
+它是div或者其他同级别block和body或是其他离他最近的母block，之间的关系
+static是永远不变的
+relative是可以游离到body page之外的，需要用coordinate来生效
+absolute也需要用coordinate来生效，但是移动范围只能是在body的界限之间
+fixed是在网页视觉上的绝对位置不变，是浏览网页时屏幕上的绝对位置。
+**/
+
+/**coordinate properties
+top
+bottom
+left
+right
+
+**/
+
+#profile-picture {
+    width: 10%;
+    height: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 6px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px #504361;
+
+}
+
+
+
+#hr-top {
+    border-style: none none solid none;
+    border-color: white;
+    width: 100%;
+    border-width: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+#hr-bottom {
+    border-style: solid none none none;
+    border-color: white;
+    width: 100%;
+    border-width: 6px;
+    margin: 0 auto 0 auto;
+}
+
+.skill-row {
+    margin: 100px auto;
+    width:50%;
+    text-align: left;
+    padding: 50px;
+    box-shadow: 5px 2px 15px #504361;
+    
+
+}
+
+
+
+.skills {
+    background-color:#bcacd3;
+    display: block;
+    left: 0px;
+    right:0px;
+    padding-top: 5%;
+}
+
+.contact-me {
+    background-color:#D8B9C3;
+    margin-bottom: 0%;
+    padding-top: 5%;
+}
+
+.HTML {
+    width:20%;
+    float: left;
+    margin-right: 30px;
+}
+
+.CSS {
+    width:20%;
+    float: right;
+    margin-left: 30px
+
+}
+
+.JavaScript{
+    width:20%;
+    float: left;
+    margin-right: 30px
+
+}
+
+
+
+
+
+.skill-description1{
+    clear:left;
+    margin:0;
+}
+
+.skill-description2{
+    clear:right;
+}
+
+.skill-description3 {
+    clear:left
+}
+
+
+/*The clear property is used to specify which side of floating elements are not allowed to float.*/
+/*最好是在不得不用的时候再用float，正常的情况最好用position，只有在wrap一段文字的时候再用float*/
+
+
+.btn {
+    background: #827397;
+    background-image: -webkit-linear-gradient(top, #827397, #504361);
+    background-image: -moz-linear-gradient(top, #827397, #504361);
+    background-image: -ms-linear-gradient(top, #827397, #504361);
+    background-image: -o-linear-gradient(top, #827397, #504361);
+    background-image: linear-gradient(to bottom, #827397, #504361);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width:10%;
+    margin: 0 auto 0 auto;
+  }
+  
+  .btn:hover {
+    background: #b6a3d1;
+    background-image: -webkit-linear-gradient(top, #b6a3d1, #827397);
+    background-image: -moz-linear-gradient(top, #b6a3d1, #827397);
+    background-image: -ms-linear-gradient(top, #b6a3d1, #827397);
+    background-image: -o-linear-gradient(top, #b6a3d1, #827397);
+    background-image: linear-gradient(to bottom, #b6a3d1, #827397);
+    text-decoration: none;
+  }
+
+.footer-link {
+    text-decoration: none;
+    color:#b6a3d1;
+    font-family: arial;
+    font-weight:lighter;
+    font-family: sans-serif;
+    margin: auto 10px auto 0;
+}
+
+.footer-link:hover {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.intro {
+    width:30%;
+    margin: 0 auto 5% auto;
+}
+
+p {
+    line-height: 2;
+}
+
+.contact-message {
+    width:30%;
+    margin:0 auto 5% auto;
+}
+
+.copyright{
+    color:#ffffff;
+}
